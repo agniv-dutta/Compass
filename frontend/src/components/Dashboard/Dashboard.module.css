@@ -1,0 +1,424 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1a1f2e 0%, #2d3142 100%);
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f5f1e8;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #0f4c5c, #d4af37) 1;
+  padding-bottom: 0.5rem;
+}
+
+.forecast-cards-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.forecast-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.material-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #d4af37, #b87333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.unit-badge {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  background: rgba(15, 76, 92, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.price-section {
+  padding: 1rem;
+  background: rgba(15, 76, 92, 0.1);
+  border-radius: 0.75rem;
+  border-left: 3px solid #d4af37;
+}
+
+.price-label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.price-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4af37;
+  font-family: 'Courier Prime', monospace;
+}
+
+.price-update {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.forecast-summary {
+  display: flex;
+  gap: 1rem;
+}
+
+.forecast-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: rgba(15, 76, 92, 0.1);
+  border-radius: 0.5rem;
+}
+
+.forecast-item .label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.forecast-item .value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: 'Courier Prime', monospace;
+}
+
+.forecast-item .value.positive {
+  color: #10b981;
+}
+
+.forecast-item .value.negative {
+  color: #ef4444;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.data-sources {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.sources-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.sources-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sources-list li {
+  font-size: 0.75rem;
+  background: rgba(15, 76, 92, 0.2);
+  color: #a0aec0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Alert Badge Styles */
+.alert-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-badge.status-buy {
+  border-left: 4px solid #10b981;
+}
+
+.alert-badge.status-hold {
+  border-left: 4px solid #f59e0b;
+}
+
+.alert-badge.status-wait {
+  border-left: 4px solid #ef4444;
+}
+
+.alert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-title {
+  font-weight: 700;
+  color: #f5f1e8;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.status-badge.buy {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.status-badge.hold {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.status-badge.wait {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.alert-reasoning {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #d1d5db;
+}
+
+.alert-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.savings-estimate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.savings-estimate .label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.savings-estimate .value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.confidence-bar {
+  height: 6px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0f4c5c, #d4af37);
+  transition: width 0.3s ease;
+}
+
+.confidence-text {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-align: right;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #d4af37, #b87333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-subtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.header-date {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-family: 'Courier Prime', monospace;
+}
+
+/* Footer styles */
+.footer {
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Chart container styles */
+.chart-container {
+  background: rgba(255, 241, 232, 0.05);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.chart-container h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-family: 'Courier Prime', monospace;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Tooltip styles for Recharts */
+.custom-tooltip {
+  background: #2d3142;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.custom-tooltip .label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f5f1e8;
+  margin-bottom: 0.5rem;
+}
+
+.custom-tooltip .actual {
+  font-size: 0.8rem;
+  color: #0f4c5c;
+}
+
+.custom-tooltip .predicted {
+  font-size: 0.8rem;
+  color: #d4af37;
+}
+
+.loading-text {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.error-banner {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #ef4444;
+}
+
+.empty-state {
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}

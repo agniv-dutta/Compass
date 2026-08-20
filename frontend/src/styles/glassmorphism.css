@@ -1,0 +1,36 @@
+.glass-panel {
+  background: rgba(255, 241, 232, 0.08);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: 1px solid rgba(255, 241, 232, 0.12);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass);
+}
+
+.glass-panel-elevated {
+  background: rgba(255, 241, 232, 0.12);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.glass-accent-border {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  background-image: linear-gradient(var(--color-charcoal), var(--color-charcoal)),
+    linear-gradient(135deg, var(--color-teal), var(--color-gold));
+  background-origin: border, border;
+  background-clip: padding-box, border-box;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-copper) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-accent-line {
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-teal) 0%, var(--color-gold) 100%);
+}

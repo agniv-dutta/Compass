@@ -1,0 +1,139 @@
+.sidebar {
+  grid-column: 1;
+  background: rgba(45, 49, 66, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem 0;
+  height: fit-content;
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar-header {
+  padding: 0 1rem;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #0f4c5c, #d4af37) 1;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f5f1e8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  color: #d4af37;
+  font-size: 1.5rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 250ms ease-in-out;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.nav-item:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+}
+
+.nav-item.active {
+  background: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.active-indicator {
+  position: absolute;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #d4af37, #0f4c5c);
+  border-radius: 3px 0 0 3px;
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  margin-top: auto;
+}
+
+.info-panel {
+  background: rgba(15, 76, 92, 0.2);
+  border: 1px solid rgba(15, 76, 92, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #10b981;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+.status-text {
+  font-size: 0.75rem;
+  color: #10b981;
+  display: inline;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
