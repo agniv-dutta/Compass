@@ -131,7 +131,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ forecasts, signals, pe
             onClick={() => exportCSV('forecasts')}
             disabled={!!exporting}
           >
-            <span className="export-icon">\u21E3</span>
             <div className="export-btn-text">
               <span className="export-btn-label">Forecasts CSV</span>
               <span className="export-btn-hint">Price predictions & accuracy</span>
@@ -143,7 +142,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ forecasts, signals, pe
             onClick={() => exportCSV('signals')}
             disabled={!!exporting}
           >
-            <span className="export-icon">\u21E3</span>
             <div className="export-btn-text">
               <span className="export-btn-label">Signals CSV</span>
               <span className="export-btn-hint">Buy/hold recommendations</span>
@@ -155,7 +153,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ forecasts, signals, pe
             onClick={() => exportCSV('performance')}
             disabled={!!exporting}
           >
-            <span className="export-icon">\u21E3</span>
             <div className="export-btn-text">
               <span className="export-btn-label">Performance CSV</span>
               <span className="export-btn-hint">Backtesting metrics</span>
@@ -167,7 +164,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ forecasts, signals, pe
             onClick={exportPDF}
             disabled={!!exporting}
           >
-            <span className="export-icon">\u21E3</span>
             <div className="export-btn-text">
               <span className="export-btn-label">Full Report (HTML)</span>
               <span className="export-btn-hint">All data in one file</span>
