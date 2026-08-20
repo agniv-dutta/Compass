@@ -8,7 +8,7 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import { PriceChart } from '../Charts/PriceChart';
 import { ComparisonChart } from '../Charts/ComparisonChart';
 import { Footer } from '../Common/Footer';
-import './Dashboard.module.css';
+import './Dashboard.css';
 
 export const Dashboard: React.FC = () => {
   const { data: forecasts, loading, error } = useForecastData();

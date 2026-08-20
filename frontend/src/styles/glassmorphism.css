@@ -1,4 +1,5 @@
 .glass-panel {
+  padding: 18px;
   background: rgba(255, 241, 232, 0.08);
   backdrop-filter: var(--backdrop-blur);
   -webkit-backdrop-filter: var(--backdrop-blur);

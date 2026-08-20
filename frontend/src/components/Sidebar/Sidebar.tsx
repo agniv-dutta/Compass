@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import './Sidebar.module.css';
+import React from 'react';
+import { useAppRoute, type AppRoute } from '../../hooks/useAppRoute';
+import './Sidebar.css';
 
 interface NavItem {
   label: string;
   icon: string;
-  active: boolean;
 }
 
 export const Sidebar: React.FC = () => {
-  const [activeNav, setActiveNav] = useState('dashboard');
+  const { route, navigate } = useAppRoute();
 
   const navItems: Record<string, NavItem> = {
-    dashboard: { label: 'Dashboard', icon: '\u25A6', active: activeNav === 'dashboard' },
-    forecasts: { label: 'Forecasts', icon: '\u25B6', active: activeNav === 'forecasts' },
-    performance: { label: 'Performance', icon: '\u25CF', active: activeNav === 'performance' },
-    scenarios: { label: 'Scenarios', icon: '\u25A0', active: activeNav === 'scenarios' },
-    settings: { label: 'Settings', icon: '\u2699', active: activeNav === 'settings' },
+    dashboard: { label: 'Dashboard', icon: '\u25A6' },
+    forecasts: { label: 'Forecasts', icon: '\u25B6' },
+    performance: { label: 'Performance', icon: '\u25CF' },
+    scenarios: { label: 'Scenarios', icon: '\u25A0' },
+    settings: { label: 'Settings', icon: '\u2699' },
   };
 
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
         <h1 className="logo">
-          <span className="logo-icon">\u2666</span> Smart Buy
+          Smart Buy
         </h1>
       </div>
 
@@ -30,12 +30,12 @@ export const Sidebar: React.FC = () => {
         {Object.entries(navItems).map(([key, item]) => (
           <button
             key={key}
-            className={`nav-item ${item.active ? 'active' : ''}`}
-            onClick={() => setActiveNav(key)}
+            className={`nav-item ${route === key ? 'active' : ''}`}
+            onClick={() => navigate(key as AppRoute)}
           >
             <span className="nav-icon">{item.icon}</span>
             <span className="nav-label">{item.label}</span>
-            {item.active && <span className="active-indicator" />}
+            {route === key && <span className="active-indicator" />}
           </button>
         ))}
       </nav>

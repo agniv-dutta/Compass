@@ -1,7 +1,7 @@
 import React from 'react';
 import type { MaterialForecast } from '../../services/types';
 import { GlassCard } from '../Common/GlassCard';
-import './Dashboard.module.css';
+import './Dashboard.css';
 
 interface ForecastCardProps {
   forecast: MaterialForecast;

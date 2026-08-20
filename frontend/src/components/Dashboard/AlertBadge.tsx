@@ -1,7 +1,7 @@
 import React from 'react';
 import type { BuySignal } from '../../services/types';
 import { GlassCard } from '../Common/GlassCard';
-import './Dashboard.module.css';
+import './Dashboard.css';
 
 interface AlertBadgeProps {
   signal: BuySignal;
