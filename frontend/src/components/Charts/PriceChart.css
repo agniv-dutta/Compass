@@ -1,0 +1,47 @@
+.price-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zoom-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.zoom-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(245, 241, 232, 0.15);
+  background: rgba(245, 241, 232, 0.04);
+  border-radius: 6px;
+  color: #c3cbca;
+  cursor: pointer;
+  font: 600 0.9rem 'Space Grotesk', sans-serif;
+  display: grid;
+  place-items: center;
+  transition: all 150ms ease;
+}
+
+.zoom-btn:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.zoom-btn.reset {
+  width: auto;
+  padding: 0 10px;
+  font-size: 0.7rem;
+}
+
+.zoom-indicator {
+  font: 400 0.65rem 'Courier Prime', monospace;
+  color: #6b7280;
+}

@@ -1,0 +1,138 @@
+.pipeline-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pipeline-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.pipeline-flow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.pipeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.node-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  transition: all 300ms ease;
+}
+
+.pipeline-node.completed .node-icon {
+  background: rgba(87, 197, 165, 0.15);
+  border: 2px solid #57c5a5;
+  color: #57c5a5;
+}
+
+.pipeline-node.active .node-icon {
+  background: rgba(212, 175, 55, 0.15);
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.3);
+  animation: pipeline-pulse 2s infinite;
+}
+
+.pipeline-node.pending .node-icon {
+  background: rgba(245, 241, 232, 0.04);
+  border: 2px solid #2d3142;
+  color: #4a5568;
+}
+
+@keyframes pipeline-pulse {
+  0%, 100% { box-shadow: 0 0 16px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 0 24px rgba(212, 175, 55, 0.5); }
+}
+
+.node-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-align: center;
+}
+
+.node-label {
+  font: 600 0.75rem 'Space Grotesk', sans-serif;
+}
+
+.pipeline-node.completed .node-label { color: #c3cbca; }
+.pipeline-node.active .node-label { color: #d4af37; }
+.pipeline-node.pending .node-label { color: #4a5568; }
+
+.node-sublabel {
+  font: 400 0.65rem 'Courier Prime', monospace;
+  color: #6b7280;
+}
+
+.node-timestamp {
+  font: 400 0.6rem 'Courier Prime', monospace;
+  color: #57c5a5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.node-timestamp.live {
+  color: #57c5a5;
+}
+
+.live-dot {
+  width: 5px;
+  height: 5px;
+  background: #57c5a5;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pipeline-connector {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 40px;
+  padding-top: 20px;
+}
+
+.connector-line {
+  flex: 1;
+  height: 2px;
+  background: #2d3142;
+}
+
+.pipeline-connector.completed .connector-line {
+  background: linear-gradient(90deg, #57c5a5, #57c5a5);
+}
+
+.connector-arrow {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid #2d3142;
+}
+
+.pipeline-connector.completed .connector-arrow {
+  border-left-color: #57c5a5;
+}

@@ -1,0 +1,262 @@
+.price-alerts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alerts-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alerts-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alert-count-badge {
+  background: #ef4444;
+  color: #fff;
+  font: 700 0.65rem 'Courier Prime', monospace;
+  padding: 2px 8px;
+  border-radius: 99px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.add-alert-btn {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: transparent;
+  color: #d4af37;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font: 600 0.75rem 'Space Grotesk', sans-serif;
+  transition: all 200ms ease;
+}
+
+.add-alert-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #d4af37;
+}
+
+.add-alert-form {
+  animation: slideDown 200ms ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-field label {
+  font: 500 0.65rem 'Courier Prime', monospace;
+  color: #8d9a9e;
+  text-transform: uppercase;
+}
+
+.form-field select,
+.form-field input {
+  padding: 8px 10px;
+  background: rgba(245, 241, 232, 0.06);
+  border: 1px solid rgba(245, 241, 232, 0.15);
+  border-radius: 6px;
+  color: #f5f1e8;
+  font: 400 0.85rem 'Space Grotesk', sans-serif;
+  outline: none;
+  min-width: 120px;
+}
+
+.form-field select:focus,
+.form-field input:focus {
+  border-color: #d4af37;
+}
+
+.form-field select option {
+  background: #202733;
+  color: #f5f1e8;
+}
+
+.form-submit {
+  padding: 8px 16px;
+  background: #d4af37;
+  border: none;
+  border-radius: 6px;
+  color: #171b26;
+  font: 600 0.8rem 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.form-submit:hover {
+  background: #edc94c;
+}
+
+.form-hint {
+  margin-top: 10px;
+  font: 400 0.7rem 'Courier Prime', monospace;
+  color: #6b7280;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.no-alerts {
+  text-align: center;
+  color: #6b7280;
+  padding: 24px;
+  font-style: italic;
+}
+
+.alert-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(245, 241, 232, 0.04);
+  border-radius: 8px;
+  border: 1px solid rgba(245, 241, 232, 0.08);
+  transition: all 200ms ease;
+}
+
+.alert-row:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.alert-row.triggered {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.06);
+}
+
+.alert-row.inactive {
+  opacity: 0.45;
+}
+
+.alert-material-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font: 700 0.7rem 'Courier Prime', monospace;
+  background: rgba(15, 76, 92, 0.3);
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.alert-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.alert-condition {
+  font: 500 0.82rem 'Space Grotesk', sans-serif;
+  color: #c3cbca;
+}
+
+.alert-condition strong {
+  color: #f5f1e8;
+}
+
+.alert-created {
+  font: 400 0.65rem 'Courier Prime', monospace;
+  color: #6b7280;
+}
+
+.alert-status-col {
+  min-width: 100px;
+}
+
+.triggered-badge {
+  font: 700 0.6rem 'Courier Prime', monospace;
+  color: #ef4444;
+  padding: 3px 8px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.approaching-badge {
+  font: 600 0.6rem 'Courier Prime', monospace;
+  color: #d4af37;
+  padding: 3px 8px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+
+.alert-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-switch {
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background 200ms ease;
+  padding: 0;
+}
+
+.toggle-switch.on {
+  background: #57c5a5;
+}
+
+.toggle-switch.off {
+  background: #4a5568;
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f5f1e8;
+  transition: left 200ms ease;
+}
+
+.toggle-switch.on .toggle-knob {
+  left: 18px;
+}
+
+.toggle-switch.off .toggle-knob {
+  left: 2px;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 4px;
+  transition: color 150ms ease;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+}

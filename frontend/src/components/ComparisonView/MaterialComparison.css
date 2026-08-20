@@ -1,0 +1,165 @@
+.comparison-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comparison-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.comparison-chart-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comparison-chart-card h4 {
+  font: 600 0.85rem 'Space Grotesk', sans-serif;
+  color: #c3cbca;
+}
+
+.radar-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font: 500 0.72rem 'Space Grotesk', sans-serif;
+  color: #9ca3af;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.comparison-table-section {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+}
+
+.comparison-table-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comparison-table-card h4 {
+  font: 600 0.85rem 'Space Grotesk', sans-serif;
+  color: #c3cbca;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th {
+  font: 600 0.68rem 'Courier Prime', monospace;
+  color: #8d9a9e;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(245, 241, 232, 0.1);
+}
+
+.comparison-table td {
+  font: 400 0.82rem 'Space Grotesk', sans-serif;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(245, 241, 232, 0.05);
+}
+
+.comparison-table .metric-name {
+  font: 500 0.8rem 'Space Grotesk', sans-serif;
+  color: #c3cbca;
+}
+
+.comparison-table .col-aluminum {
+  color: #0f4c5c;
+  font: 500 0.82rem 'Courier Prime', monospace;
+}
+
+.comparison-table .col-pvc {
+  color: #d4af37;
+  font: 500 0.82rem 'Courier Prime', monospace;
+}
+
+.comparison-table thead .col-aluminum,
+.comparison-table thead .col-pvc {
+  font: 600 0.68rem 'Courier Prime', monospace;
+}
+
+.priority-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.priority-material {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.priority-badge {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font: 700 0.8rem 'Courier Prime', monospace;
+  color: #d4af37;
+}
+
+.priority-change {
+  font: 600 0.85rem 'Courier Prime', monospace;
+}
+
+.priority-reason {
+  font: 400 0.82rem/1.6 'Lora', serif;
+  color: #aeb9bb;
+  margin-top: 4px;
+}
+
+.priority-data-sources {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(245, 241, 232, 0.08);
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.sources-label {
+  font: 500 0.6rem 'Courier Prime', monospace;
+  color: #6b7280;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.sources-value {
+  font: 400 0.7rem 'Courier Prime', monospace;
+  color: #8d9a9e;
+}
+
+@media (max-width: 900px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-table-section {
+    grid-template-columns: 1fr;
+  }
+}

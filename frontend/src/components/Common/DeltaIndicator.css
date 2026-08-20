@@ -1,0 +1,63 @@
+.delta-indicator {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(245, 241, 232, 0.04);
+  border-left: 3px solid transparent;
+}
+
+.delta-indicator.favorable {
+  border-left-color: #57c5a5;
+}
+
+.delta-indicator.unfavorable {
+  border-left-color: #ef4444;
+}
+
+.delta-label {
+  font: 500 0.6rem 'Courier Prime', monospace;
+  color: #8d9a9e;
+  text-transform: uppercase;
+}
+
+.delta-value-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.delta-arrow {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.delta-indicator.favorable .delta-arrow {
+  color: #57c5a5;
+}
+
+.delta-indicator.unfavorable .delta-arrow {
+  color: #ef4444;
+}
+
+.delta-value {
+  font: 700 'Courier Prime', monospace;
+}
+
+.delta-indicator.favorable .delta-value {
+  color: #57c5a5;
+}
+
+.delta-indicator.unfavorable .delta-value {
+  color: #ef4444;
+}
+
+.delta-period {
+  font: 400 0.58rem 'Courier Prime', monospace;
+  color: #6b7280;
+}
+
+.delta-sm .delta-value { font-size: 0.8rem; }
+.delta-md .delta-value { font-size: 1rem; }
+.delta-lg .delta-value { font-size: 1.4rem; }

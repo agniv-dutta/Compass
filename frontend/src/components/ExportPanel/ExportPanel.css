@@ -1,0 +1,75 @@
+.export-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.export-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.export-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.export-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(245, 241, 232, 0.1);
+  background: rgba(245, 241, 232, 0.04);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  text-align: left;
+}
+
+.export-btn:hover:not(:disabled) {
+  border-color: rgba(212, 175, 55, 0.3);
+  background: rgba(212, 175, 55, 0.06);
+}
+
+.export-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.export-btn.exporting {
+  border-color: #57c5a5;
+}
+
+.export-icon {
+  font-size: 1.2rem;
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.export-btn.pdf .export-icon {
+  color: #b87333;
+}
+
+.export-btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.export-btn-label {
+  font: 600 0.82rem 'Space Grotesk', sans-serif;
+  color: #f5f1e8;
+}
+
+.export-btn-hint {
+  font: 400 0.65rem 'Courier Prime', monospace;
+  color: #6b7280;
+}
+
+@media (max-width: 600px) {
+  .export-buttons {
+    grid-template-columns: 1fr;
+  }
+}

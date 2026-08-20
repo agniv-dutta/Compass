@@ -1,6 +1,8 @@
 import React from 'react';
 import type { MaterialForecast } from '../../services/types';
 import { GlassCard } from '../Common/GlassCard';
+import { DeltaIndicator } from '../Common/DeltaIndicator';
+import '../Common/DeltaIndicator.css';
 import './Dashboard.css';
 
 interface ForecastCardProps {
@@ -13,6 +15,13 @@ export const ForecastCard: React.FC<ForecastCardProps> = ({ forecast }) => {
   const priceChange =
     ((lastForecast.predicted - forecast.current_price) / forecast.current_price) * 100;
   const isPositive = priceChange > 0;
+
+  const threeMonthForecast = forecast.forecast_horizon[2];
+  const momChange = threeMonthForecast
+    ? ((threeMonthForecast.predicted - forecast.current_price) / forecast.current_price) * 100
+    : 0;
+
+  const qoqChange = priceChange;
 
   return (
     <GlassCard elevated accentBorder>
@@ -31,6 +40,23 @@ export const ForecastCard: React.FC<ForecastCardProps> = ({ forecast }) => {
           <div className="price-update">
             Last updated: {new Date(forecast.last_updated).toLocaleDateString()}
           </div>
+        </div>
+
+        <div className="delta-row">
+          <DeltaIndicator
+            value={momChange}
+            label="3M Change"
+            period="3M"
+            size="sm"
+            favorableDirection="down"
+          />
+          <DeltaIndicator
+            value={qoqChange}
+            label="6M Forecast"
+            period="6M"
+            size="sm"
+            favorableDirection="down"
+          />
         </div>
 
         <div className="forecast-summary">
